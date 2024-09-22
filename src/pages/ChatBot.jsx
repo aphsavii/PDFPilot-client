@@ -39,7 +39,7 @@ function ChatPage() {
     setQuery('');
   
     try {
-      const response = await fetch('http://4.186.56.232:3000/ask/query', {
+      const response = await fetch('https://api.slietshare.online/pdf-chatbot/ask/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fileId, query: submittedQuery }),

@@ -43,7 +43,7 @@ function Home() {
     formData.append('pdf', file);
 
     try {
-      const response = await fetch('http://4.186.56.232:3000/embed/pdf', {
+      const response = await fetch('https://api.slietshare.online/pdf-chatbot/embed/pdf', {
         method: 'POST',
         body: formData,
       });
