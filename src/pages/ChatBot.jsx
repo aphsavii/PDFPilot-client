@@ -67,7 +67,9 @@ function ChatPage() {
             try {
               const jsonData = line.slice(6);
               const data = JSON.parse(jsonData);
-              botResponse += data.answer;
+              // Remove HTML markers if they exist
+              let cleanedAnswer = data.answer.replace(/^```html\s*|\s*```$/g, '');
+              botResponse += cleanedAnswer;
               setMessages(prev => {
                 const newMessages = [...prev];
                 newMessages[newMessages.length - 1] = {
@@ -145,4 +147,4 @@ function ChatPage() {
   );
 }
 
-export default ChatPage;
+export default ChatPage;    

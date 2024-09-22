@@ -24,11 +24,11 @@ function Home() {
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
-    if (selectedFile && selectedFile.size <= 2 * 1024 * 1024) {
+    if (selectedFile && selectedFile.size <= 4.5 * 1024 * 1024) {
       setFile(selectedFile);
       setError('');
     } else {
-      setError('Please select a PDF file smaller than 2MB.');
+      setError('Please select a PDF file smaller than 4.5MB.');
       setFile(null);
     }
   };
